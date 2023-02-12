@@ -118,11 +118,19 @@
     flex-direction: column;
     justify-content: flex-start;
     text-align: left;
-    gap: 3rem;
+    gap: 2rem;
     margin-top: 9rem;
     margin-left: 2rem;
     }
   }
+    
+     & svg{
+    margin-right: 11rem;
+    align-self: end;
+    padding-right: 2rem;
+    gap: 1rem;
+  }
+    
   .pie{
     display: block;
     width: 22%;
