@@ -1,0 +1,135 @@
+@mixin flex{
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25rem;
+    /* height: 366px; */
+    background: #FBFBFB 0% 0% no-repeat padding-box;
+    box-shadow: -8px 12px 18px #0000000d;
+    border-radius: 6px;
+}
+
+.Item-container {
+    // background-image: radial-gradient(circle at top right, #ebebeb 0%, #ebebeb 100%);
+
+  
+    background: #ebebeb 0% 0% no-repeat padding-box;
+    border-top-left-radius: 50% 23%;
+    border-top-right-radius: 49% 23%;
+    opacity: 0.32;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    color: #000;
+    position: relative;
+    top: 4rem;
+
+
+  .left-items {
+    @include flex;
+    margin-top: 17rem;
+    margin-left: 6rem;
+    gap: 2rem;
+    font-size: 1.5rem;
+    .item-1{
+        @include item;
+        padding: 2rem;
+
+        & p:not(:last-child){
+            font-size: 1.8rem;
+        }
+
+        & img{
+            border-bottom: 2x red;
+        }
+
+        & hr{
+            height: 0.5rem;
+            background: #DA001A;
+            width: 34%;
+        }
+    }
+  }
+
+  .right{
+    margin-top: 20rem;
+    margin-left: 0;
+  }
+
+ 
+
+
+
+  
+  .items-right-desc {
+    @include flex;
+    // position: absolute;
+    z-index: 1;
+    top: 23rem;
+    left: 3rem;
+    width: 37%;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 3rem;
+    margin: 23rem 2rem;
+
+    & img{
+        width: 12%;
+        background: white;
+        position: absolute;
+        border-radius: 30rem;
+    }
+
+    & h3{
+        font-size: 3rem;
+
+        & span{
+            color: #E64054;
+        }
+    }
+
+    & p{
+        font-size: 2rem;
+    }
+
+    & button{
+        width: 40%;
+        border: none;
+        background: #E2495B;
+        color: #fff;
+        width: 193px;
+        height: 61px;
+        background: #E2495B 0% 0% no-repeat padding-box;
+        border-radius: 6px;
+        font-size: 2rem;
+    }
+
+    .items-right-sub{
+        z-index: 1;
+    top: 8rem;
+    left: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 3rem;
+    margin-top: 9rem;
+    margin-left: 2rem;
+    }
+  }
+  .pie{
+    display: block;
+    width: 22%;
+    z-index: 1;
+    /* height: 112%; */
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
